@@ -1,0 +1,14 @@
+<ActionBar title="Products"></ActionBar>
+<ListView [items]="products">
+  <ng-template let-product="item" let-productId="index">
+    <StackLayout orientation="vertical" class="list-group-item">
+      
+      <Label [text]="product.name" class="h3 p15" textWrap="true" [nsRouterLink]="['/products/', productId]"></Label>
+      <Label [text]="product.description" class="h3 p15" textWrap="true"></Label>
+      <Button text="Share" (tap)="share()" class="btn btn-primary"></Button>
+
+      <Button *ngIf="product.price > 700" text="Notify" (tap)="onNotify()" class="btn btn-secondary"></Button>
+
+    </StackLayout>
+  </ng-template>
+</ListView>

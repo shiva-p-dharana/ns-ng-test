@@ -13,14 +13,15 @@ export class ProductListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    //this.router.navigate(["/list"]) 
   }
 
   share() {
-    window.alert('This product has been shared!');
+    alert('This product has been shared!');
   }
 
   onNotify() {
-    window.alert('You will be notified when product goes on sale.');
+    alert('You will be notified when product goes on sale.');
   }
 
 }
